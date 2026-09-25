@@ -1935,3 +1935,265 @@ form small {
   }
 
 }
+/* =========================================================
+   NEW FEATURES - ONLY REQUIRED ADDITIONS
+========================================================= */
+
+/* Product Buy Now / View Product actions */
+.product-actions {
+  flex-wrap: wrap;
+}
+
+.product-actions .buy-now-button,
+.product-actions .view-product-button {
+  min-width: 0;
+}
+
+/* Buy Now / Profile / Orders full pages */
+.full-page-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 6500;
+  background:
+    radial-gradient(circle at 85% 10%, rgba(212,175,55,.09), transparent 30%),
+    #04070c;
+  overflow-y: auto;
+  padding: 30px 5%;
+  animation: fadeIn .3s ease;
+}
+
+.page-back-container {
+  margin-bottom: 22px;
+}
+
+.page-content-box {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px;
+  border: 1px solid rgba(212,175,55,.2);
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(15,29,48,.9), rgba(5,8,13,.96));
+  box-shadow: var(--shadow);
+}
+
+.buy-now-product,
+.profile-details,
+.order-confirmation,
+.my-order-item,
+.change-password-box,
+.insta-settings-box {
+  display: grid;
+  gap: 16px;
+}
+
+.buy-now-product-image {
+  width: 100%;
+  max-width: 330px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 1px solid var(--border);
+  margin-bottom: 18px;
+}
+
+.buy-now-controls {
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.buy-now-controls label {
+  display: block;
+  color: #b7c0cc;
+  font-size: 13px;
+}
+
+.buy-now-controls input,
+.buy-now-controls select {
+  width: 100%;
+  margin-top: 7px;
+  padding: 13px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.1);
+  outline: none;
+  background: rgba(255,255,255,.045);
+  color: #fff;
+}
+
+.buy-now-controls select option {
+  background: #0b1018;
+  color: #fff;
+}
+
+.confirm-order-button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 8px;
+}
+
+.order-confirmation {
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  padding: 35px 10px;
+}
+
+.order-confirmation h2 {
+  color: var(--gold-light);
+  font-size: clamp(28px, 5vw, 48px);
+}
+
+.order-confirmation-details {
+  width: 100%;
+  text-align: left;
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 14px;
+  background: rgba(255,255,255,.03);
+}
+
+.continue-shopping-button {
+  min-width: 210px;
+}
+
+.profile-actions,
+.order-status-actions,
+.insta-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.profile-detail-row,
+.order-detail-row {
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.profile-detail-row:last-child,
+.order-detail-row:last-child {
+  border-bottom: 0;
+}
+
+.profile-detail-row strong,
+.order-detail-row strong {
+  display: block;
+  color: var(--gold-light);
+  margin-bottom: 5px;
+}
+
+.order-status {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 10px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  color: var(--gold-light);
+  background: rgba(212,175,55,.06);
+}
+
+/* Size-wise quantity fields in owner product form */
+.size-quantity-fields {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.size-quantity-row {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  gap: 10px;
+  align-items: center;
+}
+
+.size-quantity-row input {
+  margin-top: 0;
+}
+
+.size-stock-info {
+  color: #8e99a8;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* Banner slider */
+.hero-section.banner-slider-active {
+  transition: background-image .5s ease;
+}
+
+.banner-slider-dots {
+  position: absolute;
+  left: 7%;
+  bottom: 22px;
+  z-index: 4;
+  display: flex;
+  gap: 7px;
+}
+
+.banner-slider-dot {
+  width: 8px;
+  height: 8px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,.4);
+  padding: 0;
+}
+
+.banner-slider-dot.active {
+  background: var(--gold);
+  box-shadow: 0 0 10px rgba(212,175,55,.5);
+}
+
+/* Instagram under shop name */
+.brand-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 4px;
+  color: var(--gold-light);
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.brand-instagram:hover {
+  color: #fff;
+}
+
+/* Back button is also used inside settings/management pages */
+.page-back-container .back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 520px) {
+  .full-page-panel {
+    padding: 20px 13px;
+  }
+
+  .page-content-box {
+    padding: 20px 15px;
+    border-radius: 15px;
+  }
+
+  .size-quantity-row {
+    grid-template-columns: 1fr 95px;
+  }
+
+  .banner-slider-dots {
+    left: 20px;
+  }
+
+  .profile-actions,
+  .order-status-actions,
+  .insta-actions {
+    flex-direction: column;
+  }
+
+  .profile-actions button,
+  .order-status-actions button,
+  .insta-actions button {
+    width: 100%;
+  }
+}
