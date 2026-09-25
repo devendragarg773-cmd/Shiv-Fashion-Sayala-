@@ -87,7 +87,7 @@
           title="Login"
         >
           👤
-          <span>Login</span>
+          <span id="accountButtonText">Login</span>
         </button>
 
 
@@ -734,6 +734,34 @@
 
 
 
+        <!-- MY ORDERS -->
+
+        <button
+          type="button"
+          onclick="openMyOrders()"
+          class="settings-menu-item"
+        >
+
+          <span>
+            🛍️
+          </span>
+
+          <div>
+
+            <strong>
+              My Orders
+            </strong>
+
+            <small>
+              View your orders and status
+            </small>
+
+          </div>
+
+        </button>
+
+
+
         <!-- COMPLAINT BOX -->
 
         <button
@@ -1087,6 +1115,52 @@
         </button>
 
 
+        <!-- CHANGE PASSWORD -->
+
+        <button
+          type="button"
+          onclick="openChangePassword()"
+          class="owner-card"
+        >
+
+          <span class="owner-card-icon">
+            🔐
+          </span>
+
+          <strong>
+            Change Password
+          </strong>
+
+          <small>
+            Change owner password
+          </small>
+
+        </button>
+
+
+        <!-- INSTA ID -->
+
+        <button
+          type="button"
+          onclick="openInstaSettings()"
+          class="owner-card"
+        >
+
+          <span class="owner-card-icon">
+            📸
+          </span>
+
+          <strong>
+            Insta I'd
+          </strong>
+
+          <small>
+            Set Instagram profile
+          </small>
+
+        </button>
+
+
       </div>
 
     </div>
@@ -1281,6 +1355,12 @@
         </label>
 
 
+        <div
+          id="sizeQuantityFields"
+          class="size-quantity-fields"
+        ></div>
+
+
 
         <!-- QUANTITY -->
 
@@ -1356,6 +1436,7 @@
             type="file"
             id="productImages"
             accept="image/*"
+            capture="environment"
             multiple
           >
 
@@ -2017,6 +2098,93 @@
 
     </div>
 
+
+
+    <!-- ===================================================
+         CUSTOMER PROFILE PAGE
+    ==================================================== -->
+
+    <main
+      id="profilePage"
+      class="full-page-panel hidden"
+    >
+      <div class="page-back-container">
+        <button type="button" class="back-button" onclick="goBackStep()">← Back</button>
+      </div>
+      <div id="profileContent" class="page-content-box"></div>
+    </main>
+
+
+    <!-- ===================================================
+         BUY NOW PAGE
+    ==================================================== -->
+
+    <main
+      id="buyNowPage"
+      class="full-page-panel hidden"
+    >
+      <div class="page-back-container">
+        <button type="button" class="back-button" onclick="goBackStep()">← Back</button>
+      </div>
+      <div id="buyNowContent" class="page-content-box"></div>
+    </main>
+
+
+    <!-- ===================================================
+         ORDER CONFIRMATION PAGE
+    ==================================================== -->
+
+    <main
+      id="orderConfirmationPage"
+      class="full-page-panel hidden"
+    >
+      <div id="orderConfirmationContent" class="page-content-box"></div>
+    </main>
+
+
+    <!-- ===================================================
+         MY ORDERS PAGE
+    ==================================================== -->
+
+    <main
+      id="myOrdersPage"
+      class="full-page-panel hidden"
+    >
+      <div class="page-back-container">
+        <button type="button" class="back-button" onclick="goBackStep()">← Back</button>
+      </div>
+      <div id="myOrdersContent" class="page-content-box"></div>
+    </main>
+
+
+    <!-- ===================================================
+         CHANGE PASSWORD PAGE
+    ==================================================== -->
+
+    <main
+      id="changePasswordPage"
+      class="full-page-panel hidden"
+    >
+      <div class="page-back-container">
+        <button type="button" class="back-button" onclick="goBackStep()">← Back</button>
+      </div>
+      <div id="changePasswordContent" class="page-content-box"></div>
+    </main>
+
+
+    <!-- ===================================================
+         INSTAGRAM SETTINGS PAGE
+    ==================================================== -->
+
+    <main
+      id="instaSettingsPage"
+      class="full-page-panel hidden"
+    >
+      <div class="page-back-container">
+        <button type="button" class="back-button" onclick="goBackStep()">← Back</button>
+      </div>
+      <div id="instaSettingsContent" class="page-content-box"></div>
+    </main>
 
 
     <!-- ===================================================
