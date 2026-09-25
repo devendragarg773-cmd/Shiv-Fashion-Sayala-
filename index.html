@@ -1,0 +1,2260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Shiv Fashion Sayala - Premium Men's & Boys Fashion Store">
+
+  <title>Shiv Fashion Sayala</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+  <!-- =====================================================
+       MAIN WEBSITE
+  ====================================================== -->
+
+  <div id="app">
+
+
+    <!-- ===================================================
+         HEADER
+    ==================================================== -->
+
+    <header class="main-header">
+
+      <!-- LOGO / SHOP NAME -->
+
+      <div class="brand">
+
+        <div class="brand-logo">
+          SF
+        </div>
+
+        <div class="brand-text">
+
+          <h1>
+            Shiv Fashion Sayala
+          </h1>
+
+          <p>
+            STYLE • COMFORT • YOU
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- SEARCH -->
+
+      <div class="search-container">
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search shirts, T-shirts, jeans..."
+          autocomplete="off"
+        >
+
+        <button
+          id="searchButton"
+          type="button"
+          onclick="searchProducts()"
+        >
+          🔍
+        </button>
+
+      </div>
+
+
+      <!-- HEADER ACTIONS -->
+
+      <div class="header-actions">
+
+        <button
+          type="button"
+          onclick="openLogin()"
+          title="Login"
+        >
+          👤
+          <span>Login</span>
+        </button>
+
+
+        <button
+          type="button"
+          onclick="openWishlist()"
+          title="Wishlist"
+        >
+          ♡
+          <span>Wishlist</span>
+        </button>
+
+
+        <button
+          type="button"
+          onclick="openCart()"
+          title="Cart"
+        >
+          🛒
+
+          <span>
+            Cart
+          </span>
+
+          <b id="cartCount">
+            0
+          </b>
+
+        </button>
+
+
+        <button
+          type="button"
+          onclick="openSettings()"
+          title="Settings"
+        >
+          ⚙️
+          <span>Settings</span>
+        </button>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- ===================================================
+         NAVIGATION
+    ==================================================== -->
+
+    <nav class="main-navigation">
+
+      <button
+        type="button"
+        onclick="showHome()"
+      >
+        Home
+      </button>
+
+
+      <button
+        type="button"
+        onclick="showCategory('Shirts')"
+      >
+        Shirts
+      </button>
+
+
+      <button
+        type="button"
+        onclick="showCategory('T-Shirts')"
+      >
+        T-Shirts
+      </button>
+
+
+      <button
+        type="button"
+        onclick="showCategory('Lowers')"
+      >
+        Lowers
+      </button>
+
+
+      <button
+        type="button"
+        onclick="showCategory('Jeans')"
+      >
+        Jeans
+      </button>
+
+
+      <button
+        type="button"
+        onclick="showCategory('Shorts')"
+      >
+        Shorts
+      </button>
+
+
+      <button
+        type="button"
+        onclick="showCategory('Jackets')"
+      >
+        Jackets
+      </button>
+
+
+      <button
+        type="button"
+        onclick="showCategory('Tracksuits')"
+      >
+        Tracksuits
+      </button>
+
+
+      <button
+        type="button"
+        onclick="showCategory('Hoodies')"
+      >
+        Hoodies
+      </button>
+
+
+      <button
+        type="button"
+        onclick="showCategory('Accessories')"
+      >
+        Accessories
+      </button>
+
+
+      <button
+        type="button"
+        class="offers-nav"
+        onclick="showOffers()"
+      >
+        Offers
+      </button>
+
+    </nav>
+
+
+
+    <!-- ===================================================
+         HOME PAGE
+    ==================================================== -->
+
+    <main id="homePage">
+
+
+      <!-- HERO / BANNER -->
+
+      <section
+        class="hero-section"
+        id="heroSection"
+      >
+
+        <div class="hero-overlay">
+
+          <div class="hero-content">
+
+            <p class="hero-small-title">
+              MEN'S & BOYS
+            </p>
+
+
+            <h2>
+              Premium Fashion
+              Collection
+            </h2>
+
+
+            <p class="hero-description">
+              Discover premium shirts, T-shirts,
+              lowers, jeans, shorts, hoodies
+              and more.
+            </p>
+
+
+            <button
+              type="button"
+              onclick="scrollToProducts()"
+              class="primary-button"
+            >
+              SHOP NOW →
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =================================================
+           CATEGORY SECTION
+      ================================================== -->
+
+      <section class="category-section">
+
+        <div class="section-heading">
+
+          <div>
+
+            <span class="gold-label">
+              EXPLORE
+            </span>
+
+            <h2>
+              Shop By Category
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="category-grid">
+
+
+          <button
+            type="button"
+            class="category-card"
+            onclick="showCategory('Shirts')"
+          >
+
+            <span class="category-icon">
+              👔
+            </span>
+
+            <strong>
+              Shirts
+            </strong>
+
+            <small>
+              Explore Collection
+            </small>
+
+          </button>
+
+
+
+          <button
+            type="button"
+            class="category-card"
+            onclick="showCategory('T-Shirts')"
+          >
+
+            <span class="category-icon">
+              👕
+            </span>
+
+            <strong>
+              T-Shirts
+            </strong>
+
+            <small>
+              Explore Collection
+            </small>
+
+          </button>
+
+
+
+          <button
+            type="button"
+            class="category-card"
+            onclick="showCategory('Lowers')"
+          >
+
+            <span class="category-icon">
+              👖
+            </span>
+
+            <strong>
+              Lowers
+            </strong>
+
+            <small>
+              Explore Collection
+            </small>
+
+          </button>
+
+
+
+          <button
+            type="button"
+            class="category-card"
+            onclick="showCategory('Jeans')"
+          >
+
+            <span class="category-icon">
+              👖
+            </span>
+
+            <strong>
+              Jeans
+            </strong>
+
+            <small>
+              Explore Collection
+            </small>
+
+          </button>
+
+
+
+          <button
+            type="button"
+            class="category-card"
+            onclick="showCategory('Shorts')"
+          >
+
+            <span class="category-icon">
+              🩳
+            </span>
+
+            <strong>
+              Shorts
+            </strong>
+
+            <small>
+              Explore Collection
+            </small>
+
+          </button>
+
+
+
+          <button
+            type="button"
+            class="category-card"
+            onclick="showCategory('Jackets')"
+          >
+
+            <span class="category-icon">
+              🧥
+            </span>
+
+            <strong>
+              Jackets
+            </strong>
+
+            <small>
+              Explore Collection
+            </small>
+
+          </button>
+
+
+
+          <button
+            type="button"
+            class="category-card"
+            onclick="showCategory('Tracksuits')"
+          >
+
+            <span class="category-icon">
+              🏃
+            </span>
+
+            <strong>
+              Tracksuits
+            </strong>
+
+            <small>
+              Explore Collection
+            </small>
+
+          </button>
+
+
+
+          <button
+            type="button"
+            class="category-card"
+            onclick="showCategory('Hoodies')"
+          >
+
+            <span class="category-icon">
+              🧥
+            </span>
+
+            <strong>
+              Hoodies
+            </strong>
+
+            <small>
+              Explore Collection
+            </small>
+
+          </button>
+
+
+
+          <button
+            type="button"
+            class="category-card"
+            onclick="showCategory('Accessories')"
+          >
+
+            <span class="category-icon">
+              🧢
+            </span>
+
+            <strong>
+              Accessories
+            </strong>
+
+            <small>
+              Explore Collection
+            </small>
+
+          </button>
+
+
+        </div>
+
+      </section>
+
+
+
+      <!-- =================================================
+           PRODUCTS SECTION
+      ================================================== -->
+
+      <section
+        class="products-section"
+        id="productsSection"
+      >
+
+
+        <div class="section-heading">
+
+          <div>
+
+            <span class="gold-label">
+              OUR COLLECTION
+            </span>
+
+            <h2 id="productSectionTitle">
+              Featured Products
+            </h2>
+
+          </div>
+
+
+          <button
+            type="button"
+            class="view-all-button"
+            onclick="showCategory('all')"
+          >
+            View All →
+          </button>
+
+        </div>
+
+
+
+        <!--
+          JavaScript yahan products cards
+          automatically create karega.
+        -->
+
+        <div
+          id="productGrid"
+          class="product-grid"
+        ></div>
+
+
+        <!-- NO PRODUCT MESSAGE -->
+
+        <div
+          id="noProducts"
+          class="no-products hidden"
+        >
+
+          <div>
+            🔎
+          </div>
+
+          <h3>
+            No Product Found
+          </h3>
+
+          <p>
+            Try searching for another product.
+          </p>
+
+        </div>
+
+
+      </section>
+
+
+    </main>
+
+
+
+    <!-- ===================================================
+         PRODUCT DETAIL PAGE
+    ==================================================== -->
+
+    <main
+      id="productPage"
+      class="product-page hidden"
+    >
+
+
+      <!-- BACK BUTTON -->
+
+      <div class="product-back-container">
+
+        <button
+          type="button"
+          class="back-button"
+          onclick="goHome()"
+        >
+          ← Back To Store
+        </button>
+
+      </div>
+
+
+
+      <!-- SELECTED PRODUCT -->
+
+      <section
+        id="productDetail"
+        class="product-detail-section"
+      >
+
+        <!--
+          JavaScript selected product
+          yahan show karega.
+        -->
+
+      </section>
+
+
+
+      <!-- RELATED PRODUCTS -->
+
+      <section
+        class="related-products-section"
+      >
+
+        <div class="section-heading">
+
+          <div>
+
+            <span class="gold-label">
+              YOU MAY LIKE
+            </span>
+
+            <h2>
+              More Products
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div
+          id="relatedProducts"
+          class="product-grid"
+        ></div>
+
+      </section>
+
+
+    </main>
+
+
+
+    <!-- ===================================================
+         SETTINGS PANEL
+    ==================================================== -->
+
+    <aside
+      id="settingsPanel"
+      class="side-panel hidden"
+    >
+
+      <div class="panel-header">
+
+        <div>
+
+          <span class="gold-label">
+            STORE
+          </span>
+
+          <h2>
+            Settings
+          </h2>
+
+        </div>
+
+
+        <button
+          type="button"
+          onclick="closeSettings()"
+          class="close-button"
+        >
+          ✕
+        </button>
+
+      </div>
+
+
+
+      <div class="settings-menu">
+
+
+        <!-- OWNER ACCESS -->
+
+        <button
+          type="button"
+          onclick="openOwnerAccess()"
+          class="settings-menu-item owner-menu"
+        >
+
+          <span>
+            👑
+          </span>
+
+          <div>
+
+            <strong>
+              Owner Access
+            </strong>
+
+            <small>
+              Manage your store
+            </small>
+
+          </div>
+
+        </button>
+
+
+
+        <!-- COMPLAINT BOX -->
+
+        <button
+          type="button"
+          onclick="openComplaintBox()"
+          class="settings-menu-item"
+        >
+
+          <span>
+            📝
+          </span>
+
+          <div>
+
+            <strong>
+              Complaint Box
+            </strong>
+
+            <small>
+              Send complaint or issue
+            </small>
+
+          </div>
+
+        </button>
+
+
+
+        <!-- ABOUT SHOP -->
+
+        <button
+          type="button"
+          onclick="openAboutShop()"
+          class="settings-menu-item"
+        >
+
+          <span>
+            ℹ️
+          </span>
+
+          <div>
+
+            <strong>
+              About Shop
+            </strong>
+
+            <small>
+              Know about our store
+            </small>
+
+          </div>
+
+        </button>
+
+
+
+        <!-- HELPLINE -->
+
+        <button
+          type="button"
+          onclick="openHelpline()"
+          class="settings-menu-item"
+        >
+
+          <span>
+            📞
+          </span>
+
+          <div>
+
+            <strong>
+              Helpline Number
+            </strong>
+
+            <small>
+              Contact support
+            </small>
+
+          </div>
+
+        </button>
+
+
+
+        <!-- REVIEWS -->
+
+        <button
+          type="button"
+          onclick="openReviews()"
+          class="settings-menu-item"
+        >
+
+          <span>
+            ⭐
+          </span>
+
+          <div>
+
+            <strong>
+              Reviews
+            </strong>
+
+            <small>
+              Customer reviews
+            </small>
+
+          </div>
+
+        </button>
+
+
+      </div>
+
+    </aside>
+
+
+
+    <!-- ===================================================
+         OWNER ACCESS PANEL
+    ==================================================== -->
+
+    <div
+      id="ownerPanel"
+      class="owner-panel hidden"
+    >
+
+      <div class="owner-panel-header">
+
+        <div>
+
+          <span class="gold-label">
+            ADMINISTRATION
+          </span>
+
+          <h2>
+            👑 Owner Access
+          </h2>
+
+          <p>
+            Shiv Fashion Sayala Management
+          </p>
+
+        </div>
+
+
+        <button
+          type="button"
+          onclick="closeOwnerAccess()"
+          class="close-button"
+        >
+          ✕
+        </button>
+
+      </div>
+
+
+
+      <!-- OWNER DASHBOARD -->
+
+      <div class="owner-dashboard">
+
+
+        <!-- PRODUCTS -->
+
+        <button
+          type="button"
+          onclick="openOwnerProducts()"
+          class="owner-card"
+        >
+
+          <span class="owner-card-icon">
+            📦
+          </span>
+
+          <strong>
+            Products
+          </strong>
+
+          <small>
+            Add • Edit • Delete
+          </small>
+
+        </button>
+
+
+
+        <!-- BANNERS -->
+
+        <button
+          type="button"
+          onclick="openOwnerBanners()"
+          class="owner-card"
+        >
+
+          <span class="owner-card-icon">
+            🖼️
+          </span>
+
+          <strong>
+            Add / Edit Banner
+          </strong>
+
+          <small>
+            Manage website banners
+          </small>
+
+        </button>
+
+
+
+        <!-- CUSTOMERS -->
+
+        <button
+          type="button"
+          onclick="openCustomers()"
+          class="owner-card"
+        >
+
+          <span class="owner-card-icon">
+            👥
+          </span>
+
+          <strong>
+            Total Customers
+          </strong>
+
+          <small>
+            Registered customers
+          </small>
+
+        </button>
+
+
+
+        <!-- COMPLAINTS -->
+
+        <button
+          type="button"
+          onclick="openOwnerComplaints()"
+          class="owner-card"
+        >
+
+          <span class="owner-card-icon">
+            📝
+          </span>
+
+          <strong>
+            Total Complaints
+          </strong>
+
+          <small>
+            Customer complaints
+          </small>
+
+        </button>
+
+
+
+        <!-- ORDERS -->
+
+        <button
+          type="button"
+          onclick="openOwnerOrders()"
+          class="owner-card"
+        >
+
+          <span class="owner-card-icon">
+            🛍️
+          </span>
+
+          <strong>
+            Total Orders
+          </strong>
+
+          <small>
+            Manage all orders
+          </small>
+
+        </button>
+
+
+
+        <!-- ABOUT SHOP -->
+
+        <button
+          type="button"
+          onclick="editAboutShop()"
+          class="owner-card"
+        >
+
+          <span class="owner-card-icon">
+            ℹ️
+          </span>
+
+          <strong>
+            About Shop
+          </strong>
+
+          <small>
+            Edit shop information
+          </small>
+
+        </button>
+
+
+
+        <!-- HELPLINE -->
+
+        <button
+          type="button"
+          onclick="editHelpline()"
+          class="owner-card"
+        >
+
+          <span class="owner-card-icon">
+            📞
+          </span>
+
+          <strong>
+            Help Line
+          </strong>
+
+          <small>
+            Edit helpline details
+          </small>
+
+        </button>
+
+
+
+        <!-- REVIEWS -->
+
+        <button
+          type="button"
+          onclick="openOwnerReviews()"
+          class="owner-card"
+        >
+
+          <span class="owner-card-icon">
+            ⭐
+          </span>
+
+          <strong>
+            Customer Reviews
+          </strong>
+
+          <small>
+            View reviews
+          </small>
+
+        </button>
+
+
+      </div>
+
+    </div>
+
+
+
+    <!-- ===================================================
+         OWNER PRODUCT MANAGEMENT
+    ==================================================== -->
+
+    <div
+      id="ownerProductPanel"
+      class="management-panel hidden"
+    >
+
+      <div class="management-header">
+
+        <div>
+
+          <span class="gold-label">
+            OWNER ACCESS
+          </span>
+
+          <h2>
+            Product Management
+          </h2>
+
+        </div>
+
+
+        <button
+          type="button"
+          onclick="closeManagementPanel('ownerProductPanel')"
+          class="close-button"
+        >
+          ✕
+        </button>
+
+      </div>
+
+
+
+      <!-- ADD PRODUCT BUTTON -->
+
+      <button
+        type="button"
+        onclick="openProductForm()"
+        class="primary-button add-new-button"
+      >
+        + Add New Product
+      </button>
+
+
+
+      <!-- OWNER PRODUCT LIST -->
+
+      <div
+        id="ownerProductList"
+        class="owner-list"
+      ></div>
+
+
+    </div>
+
+
+
+    <!-- ===================================================
+         PRODUCT FORM
+    ==================================================== -->
+
+    <div
+      id="productFormPanel"
+      class="form-panel hidden"
+    >
+
+      <div class="form-header">
+
+        <div>
+
+          <span class="gold-label">
+            PRODUCT
+          </span>
+
+          <h2 id="productFormTitle">
+            Add Product
+          </h2>
+
+        </div>
+
+
+        <button
+          type="button"
+          onclick="closeProductForm()"
+          class="close-button"
+        >
+          ✕
+        </button>
+
+      </div>
+
+
+
+      <form
+        id="productForm"
+        onsubmit="saveProduct(event)"
+      >
+
+
+        <!-- PRODUCT NAME -->
+
+        <label>
+          Product Name
+
+          <input
+            type="text"
+            id="productName"
+            required
+            placeholder="Example: Premium T-Shirt"
+          >
+
+        </label>
+
+
+
+        <!-- CATEGORY -->
+
+        <label>
+          Category
+
+          <select
+            id="productCategory"
+            required
+          >
+
+            <option value="">
+              Select Category
+            </option>
+
+            <option value="Shirts">
+              Shirts
+            </option>
+
+            <option value="T-Shirts">
+              T-Shirts
+            </option>
+
+            <option value="Lowers">
+              Lowers
+            </option>
+
+            <option value="Jeans">
+              Jeans
+            </option>
+
+            <option value="Shorts">
+              Shorts
+            </option>
+
+            <option value="Jackets">
+              Jackets
+            </option>
+
+            <option value="Tracksuits">
+              Tracksuits
+            </option>
+
+            <option value="Hoodies">
+              Hoodies
+            </option>
+
+            <option value="Accessories">
+              Accessories
+            </option>
+
+          </select>
+
+        </label>
+
+
+
+        <!-- SIZES -->
+
+        <label>
+          Available Sizes
+
+          <input
+            type="text"
+            id="productSizes"
+            placeholder="S, M, L, XL, XXL"
+          >
+
+        </label>
+
+
+
+        <!-- QUANTITY -->
+
+        <label>
+          Available Quantity
+
+          <input
+            type="number"
+            id="productQuantity"
+            min="0"
+            required
+            placeholder="Example: 20"
+          >
+
+        </label>
+
+
+
+        <!-- PRICE -->
+
+        <label>
+          Price
+
+          <input
+            type="number"
+            id="productPrice"
+            min="0"
+            required
+            placeholder="Example: 999"
+          >
+
+        </label>
+
+
+
+        <!-- OLD PRICE -->
+
+        <label>
+          MRP / Old Price
+
+          <input
+            type="number"
+            id="productOldPrice"
+            min="0"
+            placeholder="Example: 1499"
+          >
+
+        </label>
+
+
+
+        <!-- DESCRIPTION -->
+
+        <label>
+          Product Description
+
+          <textarea
+            id="productDescription"
+            rows="5"
+            placeholder="Write product description..."
+          ></textarea>
+
+        </label>
+
+
+
+        <!-- MULTIPLE IMAGES -->
+
+        <label>
+          Product Images
+
+          <input
+            type="file"
+            id="productImages"
+            accept="image/*"
+            multiple
+          >
+
+          <small>
+            Phone gallery ya camera se images select kar sakte ho.
+          </small>
+
+        </label>
+
+
+
+        <!-- IMAGE PREVIEW -->
+
+        <div
+          id="productImagePreview"
+          class="image-preview"
+        ></div>
+
+
+
+        <!-- SAVE -->
+
+        <button
+          type="submit"
+          class="primary-button form-save-button"
+        >
+          💾 Save Product
+        </button>
+
+
+      </form>
+
+    </div>
+
+
+
+    <!-- ===================================================
+         BANNER MANAGEMENT
+    ==================================================== -->
+
+    <div
+      id="bannerPanel"
+      class="management-panel hidden"
+    >
+
+      <div class="management-header">
+
+        <div>
+
+          <span class="gold-label">
+            OWNER ACCESS
+          </span>
+
+          <h2>
+            Banner Management
+          </h2>
+
+        </div>
+
+
+        <button
+          type="button"
+          onclick="closeManagementPanel('bannerPanel')"
+          class="close-button"
+        >
+          ✕
+        </button>
+
+      </div>
+
+
+
+      <button
+        type="button"
+        onclick="openBannerForm()"
+        class="primary-button add-new-button"
+      >
+        + Add New Banner
+      </button>
+
+
+
+      <div
+        id="bannerList"
+        class="owner-list"
+      ></div>
+
+    </div>
+
+
+
+    <!-- ===================================================
+         BANNER FORM
+    ==================================================== -->
+
+    <div
+      id="bannerFormPanel"
+      class="form-panel hidden"
+    >
+
+      <div class="form-header">
+
+        <div>
+
+          <span class="gold-label">
+            BANNER
+          </span>
+
+          <h2 id="bannerFormTitle">
+            Add Banner
+          </h2>
+
+        </div>
+
+
+        <button
+          type="button"
+          onclick="closeBannerForm()"
+          class="close-button"
+        >
+          ✕
+        </button>
+
+      </div>
+
+
+
+      <form
+        id="bannerForm"
+        onsubmit="saveBanner(event)"
+      >
+
+
+        <!-- BANNER TITLE -->
+
+        <label>
+          Banner Title
+
+          <input
+            type="text"
+            id="bannerTitle"
+            placeholder="Example: New Collection"
+            required
+          >
+
+        </label>
+
+
+
+        <!-- BANNER TEXT -->
+
+        <label>
+          Banner Text
+
+          <textarea
+            id="bannerText"
+            rows="4"
+            placeholder="Write text that will appear over banner..."
+          ></textarea>
+
+        </label>
+
+
+
+        <!-- BANNER IMAGE -->
+
+        <label>
+          Banner Image
+
+          <input
+            type="file"
+            id="bannerImage"
+            accept="image/*"
+          >
+
+          <small>
+            Phone gallery ya camera se image select kar sakte ho.
+          </small>
+
+        </label>
+
+
+
+        <!-- BANNER PREVIEW -->
+
+        <div
+          id="bannerImagePreview"
+          class="banner-image-preview"
+        ></div>
+
+
+
+        <!-- SAVE BANNER -->
+
+        <button
+          type="submit"
+          class="primary-button form-save-button"
+        >
+          💾 Save Banner
+        </button>
+
+
+      </form>
+
+    </div>
+
+
+
+    <!-- ===================================================
+         CUSTOMER PAGE
+    ==================================================== -->
+
+    <div
+      id="customersPanel"
+      class="management-panel hidden"
+    >
+
+      <div class="management-header">
+
+        <div>
+
+          <span class="gold-label">
+            OWNER ACCESS
+          </span>
+
+          <h2>
+            Total Customers
+          </h2>
+
+        </div>
+
+
+        <button
+          type="button"
+          onclick="closeManagementPanel('customersPanel')"
+          class="close-button"
+        >
+          ✕
+        </button>
+
+      </div>
+
+
+
+      <div
+        id="customerList"
+        class="owner-list"
+      ></div>
+
+    </div>
+
+
+
+    <!-- ===================================================
+         COMPLAINTS PAGE
+    ==================================================== -->
+
+    <div
+      id="complaintsPanel"
+      class="management-panel hidden"
+    >
+
+      <div class="management-header">
+
+        <div>
+
+          <span class="gold-label">
+            OWNER ACCESS
+          </span>
+
+          <h2>
+            Total Complaints
+          </h2>
+
+        </div>
+
+
+        <button
+          type="button"
+          onclick="closeManagementPanel('complaintsPanel')"
+          class="close-button"
+        >
+          ✕
+        </button>
+
+      </div>
+
+
+
+      <div
+        id="complaintList"
+        class="owner-list"
+      ></div>
+
+    </div>
+
+
+
+    <!-- ===================================================
+         ORDERS PAGE
+    ==================================================== -->
+
+    <div
+      id="ordersPanel"
+      class="management-panel hidden"
+    >
+
+      <div class="management-header">
+
+        <div>
+
+          <span class="gold-label">
+            OWNER ACCESS
+          </span>
+
+          <h2>
+            Total Orders
+          </h2>
+
+        </div>
+
+
+        <button
+          type="button"
+          onclick="closeManagementPanel('ordersPanel')"
+          class="close-button"
+        >
+          ✕
+        </button>
+
+      </div>
+
+
+
+      <div
+        id="orderList"
+        class="owner-list"
+      ></div>
+
+    </div>
+
+
+
+    <!-- ===================================================
+         COMPLAINT BOX
+    ==================================================== -->
+
+    <div
+      id="complaintBox"
+      class="modal-overlay hidden"
+    >
+
+      <div class="modal-box">
+
+        <button
+          type="button"
+          onclick="closeComplaintBox()"
+          class="close-button"
+        >
+          ✕
+        </button>
+
+
+        <span class="gold-label">
+          SUPPORT
+        </span>
+
+
+        <h2>
+          Complaint Box
+        </h2>
+
+
+        <p>
+          Apni complaint ya issue yahan submit karein.
+        </p>
+
+
+
+        <form
+          onsubmit="submitComplaint(event)"
+        >
+
+          <label>
+            Your Name
+
+            <input
+              type="text"
+              id="complaintName"
+              required
+              placeholder="Enter your name"
+            >
+
+          </label>
+
+
+
+          <label>
+            Complaint / Message
+
+            <textarea
+              id="complaintText"
+              rows="5"
+              required
+              placeholder="Write your complaint..."
+            ></textarea>
+
+          </label>
+
+
+
+          <label>
+            Photo / Video
+
+            <input
+              type="file"
+              id="complaintMedia"
+              accept="image/*,video/*"
+            >
+
+          </label>
+
+
+
+          <button
+            type="submit"
+            class="primary-button"
+          >
+            Submit Complaint
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- ===================================================
+         ABOUT SHOP
+    ==================================================== -->
+
+    <div
+      id="aboutPanel"
+      class="modal-overlay hidden"
+    >
+
+      <div class="modal-box">
+
+        <button
+          type="button"
+          onclick="closeAboutShop()"
+          class="close-button"
+        >
+          ✕
+        </button>
+
+
+        <span class="gold-label">
+          ABOUT US
+        </span>
+
+
+        <h2>
+          Shiv Fashion Sayala
+        </h2>
+
+
+        <div id="aboutContent">
+
+          <p>
+            Welcome to Shiv Fashion Sayala.
+          </p>
+
+          <p>
+            Premium Men's & Boys Fashion Store.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- ===================================================
+         HELPLINE
+    ==================================================== -->
+
+    <div
+      id="helplinePanel"
+      class="modal-overlay hidden"
+    >
+
+      <div class="modal-box">
+
+        <button
+          type="button"
+          onclick="closeHelpline()"
+          class="close-button"
+        >
+          ✕
+        </button>
+
+
+        <span class="gold-label">
+          CUSTOMER SUPPORT
+        </span>
+
+
+        <h2>
+          Helpline
+        </h2>
+
+
+        <div id="helplineContent">
+
+          <p>
+            📞 Helpline details will appear here.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- ===================================================
+         REVIEW PANEL
+    ==================================================== -->
+
+    <div
+      id="reviewPanel"
+      class="modal-overlay hidden"
+    >
+
+      <div class="modal-box">
+
+        <button
+          type="button"
+          onclick="closeReviews()"
+          class="close-button"
+        >
+          ✕
+        </button>
+
+
+        <span class="gold-label">
+          CUSTOMER EXPERIENCE
+        </span>
+
+
+        <h2>
+          ⭐ Reviews
+        </h2>
+
+
+        <div id="reviewList">
+
+          <p>
+            Customer reviews will appear here.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- ===================================================
+         LOGIN PANEL
+    ==================================================== -->
+
+    <div
+      id="loginPanel"
+      class="modal-overlay hidden"
+    >
+
+      <div class="modal-box">
+
+        <button
+          type="button"
+          onclick="closeLogin()"
+          class="close-button"
+        >
+          ✕
+        </button>
+
+
+        <span class="gold-label">
+          ACCOUNT
+        </span>
+
+
+        <h2>
+          Customer Login
+        </h2>
+
+
+        <form
+          onsubmit="customerLogin(event)"
+        >
+
+          <label>
+            Name
+
+            <input
+              type="text"
+              id="loginName"
+              required
+              placeholder="Your name"
+            >
+
+          </label>
+
+
+          <label>
+            Email
+
+            <input
+              type="email"
+              id="loginEmail"
+              required
+              placeholder="Your email"
+            >
+
+          </label>
+
+
+          <label>
+            Phone Number
+
+            <input
+              type="tel"
+              id="loginPhone"
+              required
+              placeholder="Your phone number"
+            >
+
+          </label>
+
+
+          <button
+            type="submit"
+            class="primary-button"
+          >
+            Login / Create Account
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- ===================================================
+         CART PANEL
+    ==================================================== -->
+
+    <div
+      id="cartPanel"
+      class="side-panel cart-panel hidden"
+    >
+
+      <div class="panel-header">
+
+        <div>
+
+          <span class="gold-label">
+            SHOPPING
+          </span>
+
+          <h2>
+            My Cart
+          </h2>
+
+        </div>
+
+
+        <button
+          type="button"
+          onclick="closeCart()"
+          class="close-button"
+        >
+          ✕
+        </button>
+
+      </div>
+
+
+      <div
+        id="cartItems"
+        class="cart-items"
+      ></div>
+
+
+      <div class="cart-footer">
+
+        <div>
+
+          <span>
+            Total
+          </span>
+
+          <strong id="cartTotal">
+            ₹0
+          </strong>
+
+        </div>
+
+
+        <button
+          type="button"
+          onclick="checkout()"
+          class="primary-button"
+        >
+          Proceed To Checkout →
+        </button>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- ===================================================
+         WISHLIST PANEL
+    ==================================================== -->
+
+    <div
+      id="wishlistPanel"
+      class="side-panel hidden"
+    >
+
+      <div class="panel-header">
+
+        <div>
+
+          <span class="gold-label">
+            SAVED
+          </span>
+
+          <h2>
+            Wishlist
+          </h2>
+
+        </div>
+
+
+        <button
+          type="button"
+          onclick="closeWishlist()"
+          class="close-button"
+        >
+          ✕
+        </button>
+
+      </div>
+
+
+      <div
+        id="wishlistItems"
+        class="wishlist-items"
+      ></div>
+
+    </div>
+
+
+
+    <!-- ===================================================
+         COMMON TOAST MESSAGE
+    ==================================================== -->
+
+    <div
+      id="toast"
+      class="toast hidden"
+    >
+      <span id="toastMessage"></span>
+    </div>
+
+
+
+    <!-- ===================================================
+         FOOTER
+    ==================================================== -->
+
+    <footer class="main-footer">
+
+      <div class="footer-brand">
+
+        <div class="brand-logo">
+          SF
+        </div>
+
+        <h3>
+          Shiv Fashion Sayala
+        </h3>
+
+        <p>
+          Premium Men's & Boys Fashion
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <div>
+
+          <h4>
+            Shop
+          </h4>
+
+          <button
+            onclick="showCategory('Shirts')"
+          >
+            Shirts
+          </button>
+
+          <button
+            onclick="showCategory('T-Shirts')"
+          >
+            T-Shirts
+          </button>
+
+          <button
+            onclick="showCategory('Jeans')"
+          >
+            Jeans
+          </button>
+
+          <button
+            onclick="showCategory('Hoodies')"
+          >
+            Hoodies
+          </button>
+
+        </div>
+
+
+        <div>
+
+          <h4>
+            Support
+          </h4>
+
+          <button
+            onclick="openComplaintBox()"
+          >
+            Complaint Box
+          </button>
+
+          <button
+            onclick="openAboutShop()"
+          >
+            About Shop
+          </button>
+
+          <button
+            onclick="openHelpline()"
+          >
+            Helpline
+          </button>
+
+          <button
+            onclick="openReviews()"
+          >
+            Reviews
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p>
+          © 2026 Shiv Fashion Sayala. All Rights Reserved.
+        </p>
+
+      </div>
+
+    </footer>
+
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
